@@ -11,4 +11,8 @@ class BankAccount
     @status = 'open'
   end #initialize
 
+  def deposit(amt)
+    @balance += amt
+  end #deposit
+
 end
