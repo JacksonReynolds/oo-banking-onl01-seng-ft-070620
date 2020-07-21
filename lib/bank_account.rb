@@ -2,8 +2,8 @@ require 'transfer.rb'
 
 class BankAccount
 
-  attr_accessor :balance, :status
-  attr_reader :name
+  attr_accessor :status
+  attr_reader :name, :balance
 
   def initialize(name)
     @name = name
@@ -18,5 +18,9 @@ class BankAccount
   def close_account
     @status = 'closed'
   end #close_account
+
+  def display_balance
+    "Your balance is $#{self.balance}."
+  end #display_balance
 
 end
