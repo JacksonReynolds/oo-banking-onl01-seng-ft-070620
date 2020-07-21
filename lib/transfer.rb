@@ -18,7 +18,7 @@ class Transfer
   def execute_transaction
     if self.valid?
       @sender.balance -= @amount
-      @receiver.deposit(amt)
+      @receiver.deposit(@amount)
     end #if
   end #execute_transaction
 
