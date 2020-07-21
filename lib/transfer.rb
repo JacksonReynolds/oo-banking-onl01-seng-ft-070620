@@ -10,7 +10,14 @@ class Transfer
   end #initialize
 
   def valid?
-    @sender.valid? && @receiver.valid?
+    @sender.valid? && @receiver.valid? && @sender.balance > @amount
   end #valid?
+
+  def execute_transaction
+    if self.valid?
+      @sender.balance -= amt
+      @receiver.deposit(amt)
+    end #if
+  end #execute_transaction
 
 end
