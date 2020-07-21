@@ -11,5 +11,6 @@ class Transfer
 
   def valid?
     @sender.valid? && @receiver.valid?
+  end #valid?
 
 end
