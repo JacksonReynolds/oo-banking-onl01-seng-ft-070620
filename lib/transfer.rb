@@ -9,4 +9,7 @@ class Transfer
     @amount = amt
   end #initialize
 
+  def valid?
+    @sender.valid? && @receiver.valid?
+
 end
