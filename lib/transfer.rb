@@ -2,6 +2,8 @@ require 'bank_account.rb'
 
 class Transfer
 
+  attr_accessor :sender, :receiver, :status, :amount
+
   def initialize(sender, receiver, amt)
     @sender = sender
     @receiver = receiver
