@@ -15,4 +15,8 @@ class BankAccount
     @balance += amt
   end #deposit
 
+  def close_account
+    @status = 'closed'
+  end #close_account
+
 end
